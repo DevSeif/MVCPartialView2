@@ -36,15 +36,16 @@ namespace PeopleMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                PeopleViewModel.people.Add(new Person(model.Name, model.PhoneNumber, model.City));   
+                
+                PeopleViewModel.people.Add(new Person(Guid.NewGuid().ToString(), model.Name, model.PhoneNumber, model.City));   
             }
             
             return RedirectToAction("Index");
         }
 
-        public IActionResult PersonPartial()
+        public IActionResult PeoplePartial()
         {
-            return PartialView("_Person", PeopleViewModel.people);
+            return PartialView("_People", PeopleViewModel.people);
         }
 
     }

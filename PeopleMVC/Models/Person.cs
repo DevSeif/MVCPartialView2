@@ -4,6 +4,8 @@ namespace PeopleMVC.Models
 {
     public class Person
     {
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         [Display(Name = "Phone number")]
@@ -11,8 +13,9 @@ namespace PeopleMVC.Models
 
         public string City { get; set; }
 
-        public Person(string name, string phoneNumber, string city)
+        public Person(string id, string name, string phoneNumber, string city)
         {
+            Id = id;
             Name = name;
             PhoneNumber = phoneNumber;
             City = city;

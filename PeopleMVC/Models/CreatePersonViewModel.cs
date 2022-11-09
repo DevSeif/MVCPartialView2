@@ -5,6 +5,8 @@ namespace PeopleMVC.Models
 {
     public class CreatePersonViewModel
     {
+        //public string Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 
