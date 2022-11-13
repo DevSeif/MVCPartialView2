@@ -1,0 +1,27 @@
+﻿@model Person
+
+<div class="container">
+    <div class="list-group">
+        <div class="row">
+            <div class="list-group-item">
+                <div class="row text-center">
+                    <div>
+                        @Model.Name
+                    </div>
+                    <div>
+                        @Model.PhoneNumber
+                    </div>
+                    <div>
+                        @Model.City
+                    </div>
+                    <div>
+                        <a asp-action="Delete" asp-controller="Home" asp-route-id=@Model.Id class="btn btn-danger">Delete</a>
+                    </div>
+                    <div>
+                        @Model.Id
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
